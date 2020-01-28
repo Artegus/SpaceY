@@ -1,0 +1,578 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+@font-face{
+    font-family: 'BigbigBigger';
+    src: url(../fonts/TitilliumWeb-Regular.ttf);
+}
+body,html{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/la-via-lactea-es-mayormente-plana_9fd1ebf7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+    font-family: monospace;
+    overflow: hidden;
+}
+                                        /* (INDEX)*/
+/*MENU*/
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid white;
+}
+/*Menu izquierda*/
+.logo{
+    position: absolute;
+    left: -85px;
+    letter-spacing: 3px;
+    float: left;
+    color: white;
+    font-size: 22px;
+    line-height: 80px;
+    padding: 0 6em;
+}
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-family: 'BigbigBigger';
+}
+.logo:hover a{
+    text-shadow: 0 0 20px rgba(156, 155, 155, 0.506);
+}
+/*Navegador links que direccionan a las otras paginas*/
+.menu{
+    position: absolute;
+    float: right;
+    right: 50px;
+    top: 17px;
+    margin: 0 1em;
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu ul li{
+    display: inline-block;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: lighter;
+    padding: 0 20px;
+    /*border: 1px solid white;*/
+    padding: 2px 19px;
+    font-family: 'BigbigBigger';
+}
+.menu ul li a:hover{
+    background-color: rgba(155, 152, 152, 0.387);
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px white;
+    transition: 0.4s;
+}
+.menu:hover a{
+    background-color: none;
+    transition: 0.6s;
+}
+/*TEXTO ABAJO*/
+
+.text{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text p{
+    position: relative;
+    top: 70px;
+    color: grey;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.374);    
+    font-family: 'BigbigBigger';
+}
+/*MSG DE TEXTO ABAJO*/
+.msg{
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    width: 490px;
+    height: 142px;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+.msg p{
+    margin-top: -60px;
+    font-size: 0.7em;
+    color: rgb(246, 246, 246);
+    transition: 0.7s;
+    opacity: 0;
+    text-align: left;
+}
+.text:hover .msg p{
+    transition: 0.7s;
+    opacity: 1;
+}
+.text:hover .msg{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: rgba(102, 99, 99, 0.891) rgba(5, 5, 5, 0.156);
+    scrollbar-width: thin;
+}
+.t1{/*COLOR CONVERSACIÓN*/
+    color: greenyellow;
+}
+.t2{/*COLOR CONVERSACIÓN*/
+    color: indianred;
+}
+.t3{/*COLOR CONVERSACIÓN*/
+    color: dodgerblue;
+}
+/*VidDEO POSICIÓN*/
+.videomoon{
+    position: absolute;
+    overflow: hidden;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 370px;/*Si modifico tamaño tambien tengo que hacerlo en imgder*/
+    height: 220px;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+}
+/*VIDEO*/
+.moon{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/*TItulo pequeño MOON*/
+.up{
+    position: relative;
+    top: 110px;
+    left: 0vw;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 40px;
+}
+.up a{
+    text-decoration: none;
+}
+.up{
+    overflow: hidden;
+    text-align: center;
+    font-weight: lighter;
+}
+.up h1{
+    display: inline;
+    color: white;
+}
+/*Titulo pequeño*/
+
+/*Imagen izquierda*/
+
+.imgizq{
+    position: absolute;
+    left: 7%;
+    top: 146px;
+    width: 190px;
+    height: 420px;
+}
+.imgizq{
+    border-left: 1px solid rgb(140, 140, 140);
+    border-right: 1px solid rgb(114, 114, 114);
+    background-image: url(../images/apolloXI.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -60px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.376);
+    transition: 1.2s;
+}
+.info{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    background-color: rgba(0, 0, 0, 0.39);
+    transition: 1.4s;
+    opacity: 0;
+    overflow: hidden;
+}
+.info > p{
+    font-family: 'BigbigBigger';
+}
+.info > h3{
+    font-family: 'BigbigBigger';
+}
+.info h3{
+    position: absolute;
+    margin-left: -400px;
+    top: 6%;
+    right: 0;
+    left: 0;
+    color: white;
+    text-align: center;
+    transition: 0.9s;
+}
+.info p{
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(132, 226, 206);
+    transition: 1s;
+    margin-left: 5px;
+    margin-right: 5px;
+    bottom: 2%;
+}
+.imgizq:hover h3{
+    margin-left: 0;
+}
+.imgizq:hover p{
+    left: 0;
+}
+.imgizq:hover .info{
+    opacity: 1;
+}
+/*Imagen izquierda*/
+
+/*dESPLEGABLE DERECHA MORE INFO*/
+.contenedorder2{
+    float: right;
+    width: 30px;
+    height: 20px;
+}
+.contenedorder2{
+    position: absolute;
+    float: right;
+    right: 0px;
+    height: 47px;
+    top: 25%;
+    transition: 1.2s;
+}
+.des{   /*MORE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    width: 30px;
+    writing-mode: sideways-lr;
+    padding: 10px 0 10px 0;
+    background-color: rgba(0, 0, 0, 0.295);
+    box-shadow: 0 0 15px rgba(155, 152, 152, 0.514);
+}
+.des p{
+    font-size: 13px;
+    color: white;
+}
+.info3{/*CONTENIDO*/
+    position: absolute;
+    left: 10px;
+    width: 290px;
+    margin: 0 0 0 20px;
+    height: 460px;
+    background-color: rgba(0, 0, 0, 0.295);
+    box-shadow: 0 0 15px rgba(155, 152, 152, 0.514);
+    overflow: hidden;
+
+}
+.info3 p{
+    color: white;
+    font-size: .76em;
+    margin-left: 25px;
+    text-align: left;
+    margin-right: 10px;
+}
+.info3 h4{
+    margin-top: 10px;
+    color: grey;
+    margin-left: 13px;
+}
+.info3 a{
+    text-decoration: none;
+}
+.info3 h4:hover{
+    color: rgba(255, 255, 255, 0.664);
+    text-shadow: 2px 2px 0.1em grey;
+}
+.contenedorder2:hover {
+    right: 290px;
+}
+/*INTENTO DE RESPONSIVE*/
+@media only screen and (max-width: 1100px){
+.contenedorder2{
+    opacity: 0;
+}
+}
+@media only screen and (max-width:1000px) {
+    /* For mobile phones: */
+    .logo, .menu{
+        float: left;
+        top: 1px;
+    }
+    .menu ul li{
+        display: block;
+        margin-top:4px ;
+    }
+    .nav{
+        height: 110px;
+    }
+    .imgizq{
+        opacity: 0;
+    }
+    .videomoon{
+        width:370px;
+        height: 220px;
+    }
+    .msg{
+        width: 360px;
+    }
+}
+                        /* (INDEX)*/
+
+                        /*(TrES-2b)*/
+/*
+.up2{
+    margin-top: 70px;
+    border: 1px solid red;
+    align-content: center;
+}
+.up2 h1{
+    color: white;
+    text-align: center;
+}
+*/
+.imgplanet{/*IMAGEN IZQUIERDA*/
+    position: absolute;    
+    top: 25%;
+    margin-left: 60px;
+    width: 22vw;
+    height: 35vh;
+    transition: 0.7s;
+}
+.imgplanet{
+    background-image: url(../images/TrES-2b.jpg);
+    background-size: cover;
+    background-position: center -45px;
+    box-shadow: 0 0 7px white;
+}
+.imgplanet:hover{
+    width: 32vw;
+    height: 55vh;
+}
+.imgplanet p{/*PIE de IMAGEN*/
+    color: white;
+    font-size: 90%;
+    text-align: center;
+    margin-top: 89%;
+    background-color: rgba(0, 0, 0, 0.295);
+    border-bottom: 1px solid white;
+    font-family: 'BigbigBigger';
+} 
+.infoplanet{
+    position: absolute;
+    right: 50px;
+    top: 25%;
+    width: 55vw;
+    height: 65vh;
+    background-color: rgba(0, 0, 0, 0.295);
+    box-shadow: 0 0 3px rgba(117, 117, 117, 0.482);
+}
+/*MENU INFO*/
+.menuinfo{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(68, 67, 67, 0.327);
+}
+.menuinfo ul{
+    list-style: none;
+}
+.menuinfo ul li{
+    display: inline-block;
+    background: rgba(85, 85, 85, 0.244);
+}
+.menuinfo ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;    
+    font-weight: lighter;
+    padding: 2px 45px;
+    font-family: 'BigbigBigger';
+}
+.menuinfo ul li a:hover{
+    background-color: rgba(155, 152, 152, 0.387);
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px white;
+    transition: 0.4s;
+}
+.menuinfo:hover a{
+    background-color: none;
+    transition: 0.6s;
+}
+.infotext{
+    float: left;
+    position: absolute;
+    top: 42px;
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: rgba(102, 99, 99, 0.891) rgba(5, 5, 5, 0.156);
+    scrollbar-width: thin;
+}
+/*
+.infotext h2{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.537);
+}
+*/
+
+.infotext h4,h2{
+    color: white;
+    font-family: 'BigbigBigger';
+}
+.infotext h2{
+    margin-left: 10px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    border-bottom: 1px solid grey;
+}
+.infotext h4{   
+    text-transform: full-width;
+    text-decoration: underline white;
+    margin-left: 20px;
+}
+.infotext p{
+    font-size: 0.85em;
+    color: white;
+    text-align: left;
+    margin-left: 40px;
+    margin-right: 25px;
+    letter-spacing: 0.05rem;
+    font-family: 'BigbigBigger';
+}
+
+                                                /*Gliese*/
+
+.imgplanet1{/*IMAGEN IZQUIERDA*/
+    position: absolute;    
+    top: 25%;
+    margin-left: 60px;
+    width: 22vw;
+    height: 35vh;
+    transition: 0.7s;
+}
+.imgplanet1{
+    background-image: url(../images/gliese.jpg);
+    background-size: cover;
+    background-position: 0 0;
+    box-shadow: 0 0 7px white;
+}
+.imgplanet1:hover{
+    width: 32vw;
+    height: 55vh;
+}
+.imgplanet1 p{/*PIE de IMAGEN*/
+    color: white;
+    font-size: 90%;
+    text-align: center;
+    margin-top: 89%;
+    background-color: rgba(0, 0, 0, 0.295);
+    border-bottom: 1px solid white;
+    font-family: 'BigbigBigger';
+} 
+.infoplanet1{
+    position: absolute;
+    right: 50px;
+    top: 25%;
+    width: 55vw;
+    height: 65vh;
+    background-color: rgba(0, 0, 0, 0.295);
+    box-shadow: 0 0 3px rgba(117, 117, 117, 0.482);
+}
+.menuinfo1{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(68, 67, 67, 0.327);
+}
+.menuinfo1 ul{
+    list-style: none;
+}
+.menuinfo1 ul li{
+    display: inline-block;
+    background: rgba(85, 85, 85, 0.244);
+}
+.menuinfo1 ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;    
+    font-weight: lighter;
+    padding: 0px 20px;
+    font-family: 'BigbigBigger';
+}
+.menuinfo1 ul li a:hover{
+    background-color: rgba(155, 152, 152, 0.387);
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px white;
+    transition: 0.4s;
+}
+.menuinfo1:hover a{
+    background-color: none;
+    transition: 0.6s;
+}
+                            /*MOA*/
+.imgplanet2{/*IMAGEN IZQUIERDA*/
+    position: absolute;    
+    top: 25%;
+    margin-left: 60px;
+    width: 22vw;
+    height: 35vh;
+    transition: 0.55s;
+}
+.imgplanet2{
+    background-image: url(../images/MOA.jpg);
+    background-size: cover;
+    background-position: 0 0;
+    box-shadow: 0 0 7px white;
+}
+.imgplanet2:hover{
+    width: 32vw;
+    height: 55vh;
+}
+.imgplanet2 p{/*PIE de IMAGEN*/
+    color: white;
+    font-size: 90%;
+    text-align: center;
+    margin-top: 89%;
+    background-color: rgba(0, 0, 0, 0.295);
+    border-bottom: 1px solid white;
+    font-family: 'BigbigBigger';
+} 
+.infoplanet2{
+    position: absolute;
+    right: 50px;
+    top: 25%;
+    width: 55vw;
+    height: 65vh;
+    background-color: rgba(0, 0, 0, 0.295);
+    box-shadow: 0 0 3px rgba(117, 117, 117, 0.482);
+}
