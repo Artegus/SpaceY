@@ -1,3 +1,4 @@
 # SpaceY
 >Información acerca de planetas extrasolares
->ACtulizado 28-01-2020
+>https://artegus.github.io/SpaceY/
+>Actulizado 24-04-2020
